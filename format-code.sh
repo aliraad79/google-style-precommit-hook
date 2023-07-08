@@ -12,7 +12,7 @@ fi
 cd ..
 
 changed_java_files=$(git diff --cached --name-only --diff-filter=ACMR | grep ".*java$" )
-echo "Changed Files: "
+echo "Google styling applied for This files: "
 echo $changed_java_files
-echo "-------------"
+
 java -jar .cache/$JAVA_FORMAT_JAR_NAME --replace $changed_java_files
